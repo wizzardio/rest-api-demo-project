@@ -14,12 +14,24 @@ public class GetTest extends BaseTest {
     @BeforeTest
     public void beforeTest() {
         getRouter = new Get(this.requestSpecification);
+
     }
 
     @Test
     public void getAllEmployeesReturns200() {
+        requestSpecification.given().log().all();
         Response response = getRouter.getEmployees();
         int statusCode = response.getStatusCode();
         Assert.assertEquals(statusCode, 200);
     }
+
+    @Test
+    public void getSingleEmployeeReturns200() {
+        requestSpecification.given().log().all();
+        Response response = getRouter.getSingleEmployees();
+        int statusCode = response.getStatusCode();
+        Assert.assertEquals(statusCode, 200);
+    }
+
+
 }
