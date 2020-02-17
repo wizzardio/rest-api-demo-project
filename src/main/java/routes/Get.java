@@ -5,18 +5,17 @@ import com.jayway.restassured.specification.RequestSpecification;
 
 public class Get {
     private RequestSpecification request;
-    public String route = "/employees/";
-    public String action = "/employee/";
+    public String route = "/employee";
 
     public Get(RequestSpecification requestSpecification) {
         request = requestSpecification;
     }
 
     public Response getEmployees() {
-        return this.request.get(route);
+        return this.request.get(route + "s");
     }
 
-    public Response getEmployee() {
-        return this.request.get(action + "1");
+    public Response getEmployee(int id) {
+        return this.request.get(route + "/" + id);
     }
 }

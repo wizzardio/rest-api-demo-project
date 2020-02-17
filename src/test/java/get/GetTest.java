@@ -27,7 +27,7 @@ public class GetTest extends BaseTest {
     @Test
     public void getSingleEmployeeReturns200() {
         requestSpecification.given().log().all();
-        Response response = getRouter.getEmployee();
+        Response response = getRouter.getEmployee(1);
         int statusCode = response.getStatusCode();
         Assert.assertEquals(statusCode, 200);
     }
