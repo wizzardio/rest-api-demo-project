@@ -6,8 +6,6 @@ import com.jayway.restassured.specification.RequestSpecification;
 public class Get {
     private RequestSpecification request;
     public String routeGet = "/employee";
-    //public String routePost = "/create";
-
 
     public Get(RequestSpecification requestSpecification) {
         request = requestSpecification;

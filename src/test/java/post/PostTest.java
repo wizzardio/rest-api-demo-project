@@ -5,7 +5,6 @@ import com.jayway.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-import routes.Get;
 import routes.Post;
 
 public class PostTest extends BaseTest {

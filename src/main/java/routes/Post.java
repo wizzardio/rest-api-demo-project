@@ -5,17 +5,13 @@ import com.jayway.restassured.specification.RequestSpecification;
 
 public class Post {
         private RequestSpecification request;
-        public String routePost = "/create";
-
-
+        public String route = "/create";
         public Post(RequestSpecification requestSpecification) {
             request = requestSpecification;
         }
 
-
-
         public Response createNewRecord() {
-            return this.request.post(routePost);
+            return this.request.post(route);
         }
     }
 
